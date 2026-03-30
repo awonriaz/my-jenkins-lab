@@ -3,17 +3,17 @@
                 stages {
                     stage('Clone') {
                         steps {
-                            git 'https://github.com/yourusername/yourrepository.git' // *** IMPORTANT: Update this with your actual repo URL! ***
+                            git 'https://github.com/awonriaz/my-jenkins-lab.git'
                         }
                     }
                     stage('Build') {
                         steps {
-                            sh 'echo "Simulating a build..." && sleep 5' // Placeholder for actual build command
+                            sh 'echo "Simulating a build..." && sleep 5'
                         }
                     }
                     stage('Test') {
                         steps {
-                            sh 'echo "Simulating tests..." && sleep 3' // Placeholder for actual test command
+                            sh 'echo "Simulating tests..." && sleep 3'
                         }
                     }
                     stage('Deploy') {
