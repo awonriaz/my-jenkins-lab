@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Train ML Model') {
+            steps {
+                sh 'python3 train_model.py'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'make build'  // Your build command
+            }
+        }
+        stage('Predict Build Outcome') {
+            steps {
+                sh 'python3 predict_build_outcome.py'  // Use the model to predict build outcome
+            }
+        }
+    }
+}
